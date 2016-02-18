@@ -33,6 +33,12 @@
     - { role: openapphack.security, when: extra_security_enabled }
 
   tasks:
+    - name: Install YO 
+      command: npm install -g yo
+    - name: Install bower
+      command: npm install -g bower
+    - name: Install grunt
+      command: npm install -g grunt-cli
     - name: Check if your app is already set up.
       stat: "path={{ app_path }}"
       register: app
